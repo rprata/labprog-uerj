@@ -29,6 +29,9 @@ int main (int argc, char ** argv)
 	else
 		printf("Valor %d nao foi encontrado\n", value);
 
+
+	printf("fibonacci serie %d = %ld\n", value, fibonacci (value));
+
 	return 0;
 
 }

@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-Wall
+CFLAGS=-Wall -std=gnu99
 INCLUDES= -I./
 SOURCE=main.c labprog.c
 BIN=main
