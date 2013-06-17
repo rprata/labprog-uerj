@@ -3,7 +3,7 @@
 
 unsigned long fibonacci (unsigned int n)
 {
-
+  
   f[0] = 0;
   f[1] = 1;
 
@@ -54,8 +54,9 @@ int binary_search(int a[], int low, int high, int target)
         return binary_search(a, low, middle-1, target);
     else if (target > a[middle])
         return binary_search(a, middle+1, high, target);
-    else if (target == a[middle])
+    else
         return middle;
+
 }
 
 void quick_sort (int vec[], int left, int right)

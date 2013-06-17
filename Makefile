@@ -1,11 +1,14 @@
 CC=gcc
 CFLAGS=-Wall -std=gnu99
-INCLUDES= -I./
-SOURCE=main.c labprog.c
-BIN=main
+INCLUDES= -I.
+BIN=labprog-teste
+OBJS=labprog.o main.o
 
-all:
-	$(CC) $(CFLAGS) -o $(BIN) $(INCLUDES) $(SOURCE)
+%.o: %.c
+	$(CC) $(CFLAGS) -c -o $@ $< $(INCLUDES)
+
+labprog-teste: $(OBJS)
+	$(CC) $(CFLAGS) -o $(BIN) $(INCLUDES) $(OBJS)
 
 clean:
-	rm $(BIN)
+	rm $(BIN) $(OBJS)
