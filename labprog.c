@@ -1,5 +1,35 @@
 #include "labprog.h"
 
+Point make_point (int x, int y)
+{
+  Point p;
+  p.x = x;
+  p.y = y;
+  return p;  
+}
+
+int compare_point (Point p1, Point p2)
+{
+  if (p1.x == p2.x && p1.y == p2.y)
+    return TRUE;
+  else
+    return FALSE;
+}
+  
+Point add_point (Point p1, Point p2)
+{
+  return make_point(p1.x + p2.x, p1.y + p2.y);
+}
+
+Rect make_rect (Point p1, Point p2, Point p3, Point p4)
+{
+  Rect r;
+  r.p1 = p1;
+  r.p2 = p2;
+  r.p3 = p3;
+  r.p4 = p4;
+  return r;
+}
 
 unsigned long fibonacci (unsigned int n)
 {
